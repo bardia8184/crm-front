@@ -1,0 +1,131 @@
+html, body, #__nuxt, #__layout, #__layout > div {
+  height: 100%
+}
+
+.base_bg_color {
+  background-color: #421C5E
+}
+
+.bg_grey, table tr {
+  background-color: #F0F0F0
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Loader */
+.custom_loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  color: #FE4CAE;
+}
+
+.custom_loader:before,
+.custom_loader:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+
+.custom_loader:after {
+  color: #00D6DC;
+  transform: rotateY(70deg);
+  animation-delay: .4s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: .2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: .2em .2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 .2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -.2em .2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -.2em -.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: .2em -.2em 0 0 currentcolor;
+  }
+}
+
+/* Table */
+th, th, td {
+  border: 0 !important;
+  font-size: 1rem !important;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 20px;
+  color: #7F7F7F !important;
+}
+
+/* Menu Icon */
+.hamburger-lines {
+  height: 26px;
+  width: 32px;
+}
+
+.hamburger-lines .line {
+  display: block;
+  height: 3px;
+  width: 100%;
+  border-radius: 10px;
+  background: #fff;
+  margin-bottom: 5px;
+}
+
+.hamburger-lines .line2 {
+  transform: translateX(-5px)
+}
+
+/* Responsive */
+@media only screen and (max-width: 992px ) {
+  #nav-collapse {
+    display: contents !important
+  }
+}
